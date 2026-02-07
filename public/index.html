@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Express | Calculator </title>
+</head>
+<body>
+
+  <h1>Stats Calculator</h1>
+
+  <p>Enter numbers separated by commas:</p>
+
+  <input type="text" id="numbers" placeholder="1,2,3,4">
+
+  <br><br>
+
+  <button onclick="goTo('mean')">Mean</button>
+  <button onclick="goTo('median')">Median</button>
+  <button onclick="goTo('mode')">Mode</button>
+
+  <script>
+    function goTo(type) {
+      const nums = document.getElementById("numbers").value;
+      window.location.href = `/${type}?nums=${nums}`;
+    }
+  </script>
+
+
+</body>
+</html>
